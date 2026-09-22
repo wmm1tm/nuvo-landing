@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuvo — Privacy Policy / Privacyverklaring</title>
+<meta name="description" content="Nuvo's privacy policy in English and Dutch.">
+<link rel="canonical" href="https://nuvoapp.nl/privacy/">
+<link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/privacy/">
+<link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/privacy/">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/style.css">
+<script>
+  // Same browser-language redirect as the site root; ?lang=none shows the choice.
+  (function () {
+    if (/[?&]lang=none(&|$)/.test(window.location.search)) return;
+    var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    window.location.replace(lang.indexOf('nl') === 0 ? '/nl/privacy/' : '/en/privacy/');
+  })();
+</script>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="brand">
+    <img src="/assets/icon.png" alt="">
+    <span>Nuvo</span>
+  </div>
+
+  <div class="lang-choice">
+    <a href="/nl/privacy/" hreflang="nl" lang="nl">Privacyverklaring</a>
+    <a href="/en/privacy/" hreflang="en" lang="en">Privacy Policy</a>
+  </div>
+
+</div>
+</body>
+</html>

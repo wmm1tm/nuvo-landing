@@ -2,18 +2,52 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Nuvo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuvo — baby tracking with one gesture</title>
+<meta name="description" content="Track sleep, feeding and diapers with one gesture on the wheel. No account needed. Try free for 7 days.">
+<link rel="canonical" href="https://nuvoapp.nl/">
+<link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/">
+<link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/">
+<link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nuvo">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:url" content="https://nuvoapp.nl/">
+<meta property="og:title" content="Nuvo — baby tracking with one gesture">
+<meta property="og:description" content="Track sleep, feeding and diapers with one gesture on the wheel. No account needed. Try free for 7 days.">
+<meta property="og:image" content="https://nuvoapp.nl/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nuvo app icon, the headline 'Track sleep, feeding and diapers — with one gesture' and the wheel on an iPhone screen">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/style.css">
 <script>
   // Browser-language detection only — no IP geolocation, consistent with
-  // Nuvo's own local-first / no-tracking positioning.
-  var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-  var target = lang.indexOf('nl') === 0 ? '/nl/' : '/en/';
-  window.location.replace(target);
+  // Nuvo's own local-first / no-tracking positioning. ?lang=none skips the
+  // redirect and shows the language choice below.
+  (function () {
+    if (/[?&]lang=none(&|$)/.test(window.location.search)) return;
+    var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    window.location.replace(lang.indexOf('nl') === 0 ? '/nl/' : '/en/');
+  })();
 </script>
 </head>
 <body>
-  <noscript>
-    <p>Nuvo — <a href="/nl/">Nederlands</a> · <a href="/en/">English</a></p>
-  </noscript>
+
+<div class="wrap">
+
+  <div class="brand">
+    <img src="/assets/icon.png" alt="">
+    <span>Nuvo</span>
+  </div>
+
+  <div class="lang-choice">
+    <a href="/nl/" hreflang="nl" lang="nl">Nederlands</a>
+    <a href="/en/" hreflang="en" lang="en">English</a>
+  </div>
+
+</div>
 </body>
 </html>

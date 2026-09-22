@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nuvo og-image template</title>
+<!-- Rendered to assets/og-<lang>.png by og-src/build.mjs. Open with ?lang=nl or
+     ?lang=en to preview. Keep the headlines in sync with the h1 of nl/ and en/. -->
+<style>
+  :root {
+    --bg: #12161c;
+    --text: #ECEDEE;
+    --muted: #8B95A1;
+    --amber: #F0C077;
+    --border: #2a323e;
+  }
+  html, body {
+    margin: 0;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .canvas {
+    position: relative;
+    width: 1200px;
+    height: 630px;
+    background: radial-gradient(circle at 78% 40%, rgba(240,192,119,0.14), transparent 55%), var(--bg);
+  }
+  .copy {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    bottom: 0;
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .brand img {
+    width: 64px;
+    height: 64px;
+    border-radius: 15px;
+  }
+  .brand span {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 54px;
+    line-height: 1.15;
+    font-weight: 700;
+  }
+  .note {
+    margin-top: 28px;
+    font-size: 24px;
+    color: var(--amber);
+    font-weight: 600;
+  }
+  .phone {
+    position: absolute;
+    right: 110px;
+    top: 64px;
+    width: 330px;
+    border-radius: 34px;
+    border: 2px solid var(--border);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="copy">
+    <div class="brand">
+      <img src="../assets/icon.png" alt="">
+      <span>Nuvo</span>
+    </div>
+    <h1 id="headline"></h1>
+    <div class="note" id="note"></div>
+  </div>
+  <img class="phone" src="../assets/hero-wheel.png" alt="">
+</div>
+<script>
+  var copy = {
+    nl: {
+      headline: 'Slaap, voeding en luiers bijhouden — met één gebaar',
+      note: 'Probeer 7 dagen gratis · geen account nodig'
+    },
+    en: {
+      headline: 'Track sleep, feeding and diapers — with one gesture',
+      note: 'Try 7 days free · no account needed'
+    }
+  };
+  var lang = new URLSearchParams(location.search).get('lang') === 'nl' ? 'nl' : 'en';
+  document.documentElement.lang = lang;
+  document.getElementById('headline').textContent = copy[lang].headline;
+  document.getElementById('note').textContent = copy[lang].note;
+</script>
+</body>
+</html>

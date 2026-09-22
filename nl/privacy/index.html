@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuvo — Privacyverklaring</title>
+<meta name="description" content="Welke gegevens de babytracker-app Nuvo verwerkt en waarom: lokale opslag, geen account, geen tracking.">
+<link rel="canonical" href="https://nuvoapp.nl/nl/privacy/">
+<link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/privacy/">
+<link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/privacy/">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  :root {
+    --bg: #F6F5F2;
+    --surface: #FFFFFF;
+    --surface-2: #FBFAF7;
+    --text: #1C1B19;
+    --muted: #6B675F;
+    --accent: #B97A2E;
+    --border: #E7E3DB;
+    --rule: #DFDACE;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12161C;
+      --surface: #1A2029;
+      --surface-2: #171C24;
+      --text: #ECEDEE;
+      --muted: #9099A6;
+      --accent: #E3A857;
+      --border: #2A313C;
+      --rule: #262D38;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { text-decoration-color: var(--accent); }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+  }
+
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 40px;
+  }
+  .mark {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .mark img { width: 34px; height: 34px; object-fit: contain; }
+  .masthead-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .wordmark {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(28px, 5vw, 34px);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin-bottom: 48px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .meta span { white-space: nowrap; }
+  .meta b { color: var(--text); font-weight: 500; }
+
+  .lede {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 58ch;
+    margin: 0 0 48px;
+  }
+
+  section { margin-bottom: 40px; }
+  section:last-of-type { margin-bottom: 0; }
+
+  .eyebrow {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+  }
+
+  section p { margin: 0 0 14px; max-width: 62ch; }
+  section p:last-child { margin-bottom: 0; }
+  section ul { margin: 0 0 14px; padding-left: 22px; max-width: 62ch; }
+  section li { margin-bottom: 6px; }
+  section li:last-child { margin-bottom: 0; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+
+  .not-list {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .not-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--muted);
+  }
+  .not-list svg { flex-shrink: 0; margin-top: 3px; }
+
+  .contact {
+    border-top: 1px solid var(--rule);
+    padding-top: 28px;
+    margin-top: 48px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  .contact a { color: var(--text); font-weight: 600; }
+
+  @media (max-width: 420px) {
+    .page { padding: 40px 16px 64px; }
+    .lede { font-size: 16.5px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="masthead">
+    <div class="mark"><img src="/assets/splash-icon.png" alt=""></div>
+    <div class="masthead-text">
+      <a class="wordmark" href="/nl/">Nuvo</a>
+      <h1>Privacyverklaring</h1>
+    </div>
+  </div>
+
+  <div class="meta">
+    <span>Laatst bijgewerkt: <b>19 september 2026</b></span>
+    <span>Betreft: <b>Nuvo voor iOS</b></span>
+    <span><a href="/en/privacy/" hreflang="en" lang="en">English</a></span>
+  </div>
+
+  <p class="lede">Nuvo is een babytracker-app. Deze verklaring legt uit welke gegevens de app verwerkt en waarom — in gewone taal, want er is niet veel te vertellen.</p>
+
+  <section>
+    <div class="eyebrow"><span class="num">§1</span><h2>Welke gegevens verwerkt Nuvo</h2></div>
+    <p>Nuvo werkt lokaal: alles wat je invoert — voedingen, slaap, luiers, temperatuur, notities, de naam en geboortedatum van je kind, en je instellingen — wordt opgeslagen in een database <strong>op je eigen toestel</strong>. Wij hebben daar geen toegang toe en zien deze gegevens nooit.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="num">§2</span><h2>Delen met een partner</h2></div>
+    <p>Nuvo heeft een optionele functie om de tijdlijn van een kind te delen met één partner op een ander toestel. Schakel je die in, dan geldt:</p>
+    <div class="card">
+      <ul>
+        <li>Een versleutelingssleutel wordt alleen op je eigen toestel aangemaakt en gedeeld via een QR-code die je zelf toont aan je partner. Deze sleutel bereikt onze server nooit.</li>
+        <li>Je events worden versleuteld naar een server (Supabase) gestuurd zodat het andere toestel ze kan ophalen. De server ziet alleen versleutelde, onleesbare gegevens.</li>
+        <li>Er is geen gebruikersaccount, e-mailadres of wachtwoord voor deze functie nodig.</li>
+      </ul>
+    </div>
+    <p style="margin-top: 14px;">Schakel je deze functie niet in, dan verlaat er geen enkel gegeven je toestel.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="num">§3</span><h2>Abonnement en betalingen</h2></div>
+    <p>Nuvo wordt aangeboden via een abonnement, verwerkt via Apple's App Store en RevenueCat. Wij ontvangen geen creditcard- of betaalgegevens — dat verloopt volledig via Apple. RevenueCat ontvangt alleen wat nodig is om je abonnementsstatus te bevestigen (een door Apple gegenereerde, anonieme gebruikers-ID en aankoopgegevens), niets van de inhoud van wat je in Nuvo invoert. RevenueCat gebruikt deze aankoopgegevens ook voor eigen, geaggregeerde abonnementsstatistieken (bijvoorbeeld hoeveel mensen een proefperiode omzetten in een betaald abonnement) — dit gaat nooit over de inhoud van je gegevens, alleen over aankoopgedrag.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="num">§4</span><h2>Cameratoegang</h2></div>
+    <p>Nuvo vraagt cameratoegang uitsluitend om de deel-QR-code van je partner te scannen bij het koppelen van een kind. Er worden geen foto's gemaakt, opgeslagen of verzonden.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="num">§5</span><h2>Wat we niet doen</h2></div>
+    <ul class="not-list">
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Geen eigen analytics, tracking of advertenties in de app — de enige uitzondering is de standaard aankoopanalyse van RevenueCat, zie §3</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Geen verkoop of delen van gegevens met derden</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Geen gebruikersaccounts of inlog</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="num">§6</span><h2>Jouw gegevens beheren</h2></div>
+    <p>Via Instellingen kun je op elk moment je gegevens exporteren (CSV/JSON) of een dag, een kind, of de hele app-data verwijderen. Verwijder je de app, dan verdwijnt ook alle lokale data van dat toestel.</p>
+  </section>
+
+  <div class="contact">
+    Vragen over deze verklaring? Neem contact op via <a href="mailto:wmtmbu@proton.me">wmtmbu@proton.me</a>.
+  </div>
+
+</div>
+</body>
+</html>

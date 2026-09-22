@@ -7,15 +7,34 @@ IP-geolocatie) en stuurt door. Geen externe scripts, geen tracking, geen cookies
 ## Structuur
 
 ```
-index.html          — taalredirect (navigator.language) + no-JS fallback-links
+index.html          — taalredirect (navigator.language) + zichtbare taalkeuze; ?lang=none slaat de redirect over
 nl/index.html        — Nederlandse landingspagina
 en/index.html        — Engelse landingspagina
+privacy/index.html   — taalredirect naar nl/privacy/ of en/privacy/
+nl/privacy/, en/privacy/ — privacyverklaring (voorheen wmm1tm.github.io/nuvo-privacy)
+sitemap.xml, robots.txt — de drie hoofd-URL's met hreflang-alternates
+assets/og-nl.png, og-en.png — deelafbeeldingen (1200x630), gegenereerd, niet met de hand bewerken
+og-src/              — template + script voor de og-afbeeldingen
 assets/style.css     — gedeelde stijl (donker thema, zelfde tokens als de app)
 assets/icon.png       — app-icoon
 assets/favicon.png    — favicon
 assets/hero-wheel.png — hero-screenshot (het wiel + tijdlijn), verkleind voor web
 netlify.toml          — publish-map + wat lichte security-headers
 ```
+
+## SEO en delen
+
+- Alle drie de hoofdpagina's (`/`, `/nl/`, `/en/`) hebben een canonical naar zichzelf en
+  dezelfde hreflang-set: nl → `/nl/`, en → `/en/`, x-default → `/`. Voeg je een pagina
+  toe, houd die set en `sitemap.xml` gelijk.
+- Open Graph/Twitter-tags per taal verwijzen naar `assets/og-<taal>.png`.
+- **og-afbeeldingen opnieuw bouwen** (na een nieuwe kop, icoon of hero-afbeelding): pas
+  zo nodig de teksten aan in `og-src/template.html` en draai vanuit deze map
+  `node og-src/build.mjs`. Gebruikt de geïnstalleerde Chrome of Edge, geen npm-pakketten.
+  Voorbeeld bekijken: open `og-src/template.html?lang=nl` in de browser.
+- App Store-links dragen een campagne-parameter (`?ct=site-nl` / `?ct=site-en`), zichtbaar
+  in App Store Connect → App Analytics → Sources. Apple telt campagnes pas mee als de
+  link ook je provider-id bevat (`&pt=<id>`); die staat er nog niet in.
 
 ## Deployen op Netlify
 

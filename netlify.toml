@@ -6,3 +6,10 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Source for the og-images (see README) — deployed along with the site, but
+# kept out of search results.
+[[headers]]
+  for = "/og-src/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
