@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nuvo</title>
+<script>
+  // Browser-language detection only — no IP geolocation, consistent with
+  // Nuvo's own local-first / no-tracking positioning.
+  var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  var target = lang.indexOf('nl') === 0 ? '/nl/' : '/en/';
+  window.location.replace(target);
+</script>
+</head>
+<body>
+  <noscript>
+    <p>Nuvo — <a href="/nl/">Nederlands</a> · <a href="/en/">English</a></p>
+  </noscript>
+</body>
+</html>
