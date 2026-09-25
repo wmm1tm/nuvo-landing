@@ -107,6 +107,14 @@ h1 {
   box-shadow: 0 6px 20px rgba(240,192,119,0.25);
 }
 
+.cta.soon {
+  cursor: default;
+  background: transparent;
+  color: var(--amber);
+  border: 1.5px solid var(--amber);
+  box-shadow: none;
+}
+
 .cta-note {
   text-align: center;
   color: var(--muted);

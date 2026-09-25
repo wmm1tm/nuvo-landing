@@ -70,3 +70,12 @@ netlify.toml          — publish-map + wat lichte security-headers
   bij deze ene landingspagina.
 - Screenshot is nu 640px breed (~330KB) — prima voor nu, kan later vervangen worden door
   een geëxporteerde videoframe of een lichtere WebP-versie.
+
+## Tijdelijk "Binnenkort in de App Store" (sinds 2026-09-25)
+
+De knop "Probeer 7 dagen gratis" en de Safari-appbanner staan tijdelijk uit. Terugzetten zodra
+de nieuwe versie live staat: in `nl/index.html` en `en/index.html` de uitgecommentarieerde
+`<a class="cta" …>` en `<p class="cta-note">` terugzetten (staan als commentaar in `.cta-row`),
+de `apple-itunes-app`-meta in de head weer aanzetten, in `og-src/template.html` de `note` terug
+naar "Probeer 7 dagen gratis · geen account nodig" / "Try 7 days free · no account needed",
+`node og-src/build.mjs`, en `nuvo-landing-upload` opnieuw vullen.
