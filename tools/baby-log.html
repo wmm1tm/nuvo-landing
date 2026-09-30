@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- Source of assets/baby-log.pdf (US Letter). After editing: node tools/print.mjs -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Baby log – Nuvo</title>
+<style>
+  @page { size: letter portrait; margin: 0.45in 0.45in 0.4in; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 10pt/1.4 "Segoe UI", -apple-system, system-ui, sans-serif; color: #1d2430; }
+  h1 { font-size: 17pt; margin: 0; letter-spacing: -0.2pt; }
+  h2 { font-size: 12pt; margin: 0 0 3mm; }
+  .page { height: 256mm; display: flex; flex-direction: column; }
+  .page + .page { break-before: page; }
+  .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 8mm; margin-bottom: 4mm; }
+  .fields { font-size: 9.5pt; color: #4a5566; display: flex; gap: 6mm; }
+  .fields span { display: inline-block; min-width: 32mm; border-bottom: 0.8pt solid #9aa3b0; margin-left: 2mm; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; flex: 1; }
+  th { text-align: left; vertical-align: top; padding: 2mm 2.5mm; font-size: 9.5pt; background: #f4ecdd; border: 0.8pt solid #cdbfa5; }
+  th small { display: block; font-weight: 400; color: #5d6574; font-size: 8pt; margin-top: 0.6mm; }
+  td { border: 0.8pt solid #cdbfa5; padding: 1.5mm 2.5mm; vertical-align: top; }
+  tbody tr { height: 10.6mm; }
+  tfoot td { height: 9mm; font-weight: 600; background: #fbf7ef; }
+  .c-time { width: 18mm; }
+  .c-feed { width: 46mm; }
+  .c-sleep { width: 36mm; }
+  .c-diaper { width: 26mm; }
+  .box-tick { display: inline-block; width: 3.2mm; height: 3.2mm; border: 0.8pt solid #9aa3b0; border-radius: 0.6mm; vertical-align: -0.4mm; margin-right: 1mm; }
+  .muted { color: #8a92a0; font-size: 8.5pt; }
+  .foot { display: flex; justify-content: space-between; font-size: 8pt; color: #6a7382; margin-top: 2.5mm; }
+  .foot b { color: #9a6d2b; }
+  .ex td { font-size: 9pt; }
+  .ex tbody tr { height: auto; }
+  ul { margin: 0; padding-left: 5mm; }
+  li { margin-bottom: 1.8mm; }
+  .box { border: 0.8pt solid #cdbfa5; border-radius: 3mm; padding: 4mm 5mm; margin-top: 6mm; }
+</style>
+</head>
+<body>
+<section class="page">
+  <div class="top">
+    <h1>Baby log</h1>
+    <div class="fields"><div>Name <span></span></div><div>Date <span></span></div></div>
+  </div>
+  <table>
+    <colgroup><col class="c-time"><col class="c-feed"><col class="c-sleep"><col class="c-diaper"><col></colgroup>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Feed<small>breast L / R or bottle … ml/oz</small></th>
+        <th>Sleep<small>from … until …</small></th>
+        <th>Diaper<small>wet / dirty</small></th>
+        <th>Note<small>anything notable, medicine, crying …</small></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · bottle ___</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td>Total</td><td>___ feeds · ___ ml/oz</td><td>___ hrs sleep</td><td>___ / ___</td><td></td></tr>
+    </tfoot>
+  </table>
+  <div class="foot">
+    <span>First box = wet, second = dirty. Write it down straight away: at night you really will not remember later.</span>
+    <span>Made with <b>Nuvo</b> · nuvoapp.nl</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="top">
+    <h1>How to fill it in</h1>
+    <div class="fields">Example and tips</div>
+  </div>
+  <h2>Example</h2>
+  <table class="ex">
+    <colgroup><col class="c-time"><col class="c-feed"><col class="c-sleep"><col class="c-diaper"><col></colgroup>
+    <thead><tr><th>Time</th><th>Feed</th><th>Sleep</th><th>Diaper</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>6:40 am</td><td>Breast L, then R</td><td></td><td>wet</td><td>Woke up happy</td></tr>
+      <tr><td>8:15 am</td><td></td><td>8:15 – 9:50</td><td></td><td>In the crib</td></tr>
+      <tr><td>10:00 am</td><td>Bottle 4 oz</td><td></td><td>wet + dirty</td><td></td></tr>
+      <tr><td>1:30 pm</td><td>Breast R</td><td>1:50 – 3:10</td><td>wet</td><td>Vitamin D given</td></tr>
+      <tr><td>3:10 am</td><td>Bottle 3 oz</td><td>3:30 – 6:30</td><td>wet</td><td>Back to sleep quickly</td></tr>
+    </tbody>
+  </table>
+  <div class="box">
+    <h2>Tips</h2>
+    <ul>
+      <li>Keep a pen and the log where you feed or change, so you fill it in right away.</li>
+      <li>For breastfeeding, note which side you ended on; then you know where to start next time.</li>
+      <li>At the end of the day, add up the feeds, hours of sleep and wet diapers. After a few days, the rhythm shows.</li>
+      <li>Bring it to your paediatrician or health visitor: questions like “how often does she feed?” and “how much does he sleep?” are then easy to answer.</li>
+    </ul>
+  </div>
+  <div class="box">
+    <h2>Prefer your phone?</h2>
+    <p style="margin:0">Nuvo does the same with one gesture on the wheel, even one-handed at night. Your partner can follow along, encrypted, and you turn it into a PDF in one tap. Search for “Nuvo” in the App Store.</p>
+  </div>
+  <div style="flex:1"></div>
+  <div class="foot">
+    <span>Nuvo is a logbook, not medical advice. In doubt? Contact your health visitor, paediatrician or doctor.</span>
+    <span>Made with <b>Nuvo</b> · nuvoapp.nl</span>
+  </div>
+</section>
+</body>
+</html>

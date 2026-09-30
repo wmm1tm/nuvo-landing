@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- Bron van assets/baby-logboek.pdf. Na aanpassen: node tools/print.mjs -->
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Baby-logboek – Nuvo</title>
+<style>
+  @page { size: A4 portrait; margin: 12mm 12mm 10mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 10pt/1.4 "Segoe UI", -apple-system, system-ui, sans-serif; color: #1d2430; }
+  h1 { font-size: 17pt; margin: 0; letter-spacing: -0.2pt; }
+  h2 { font-size: 12pt; margin: 0 0 3mm; }
+  .page { height: 273mm; display: flex; flex-direction: column; }
+  .page + .page { break-before: page; }
+  .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 8mm; margin-bottom: 4mm; }
+  .fields { font-size: 9.5pt; color: #4a5566; display: flex; gap: 6mm; }
+  .fields span { display: inline-block; min-width: 32mm; border-bottom: 0.8pt solid #9aa3b0; margin-left: 2mm; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; flex: 1; }
+  th { text-align: left; vertical-align: top; padding: 2mm 2.5mm; font-size: 9.5pt; background: #f4ecdd; border: 0.8pt solid #cdbfa5; }
+  th small { display: block; font-weight: 400; color: #5d6574; font-size: 8pt; margin-top: 0.6mm; }
+  td { border: 0.8pt solid #cdbfa5; padding: 1.5mm 2.5mm; vertical-align: top; }
+  tbody tr { height: 11.5mm; }
+  tfoot td { height: 9mm; font-weight: 600; background: #fbf7ef; }
+  .c-time { width: 18mm; }
+  .c-feed { width: 46mm; }
+  .c-sleep { width: 36mm; }
+  .c-diaper { width: 26mm; }
+  .box-tick { display: inline-block; width: 3.2mm; height: 3.2mm; border: 0.8pt solid #9aa3b0; border-radius: 0.6mm; vertical-align: -0.4mm; margin-right: 1mm; }
+  .muted { color: #8a92a0; font-size: 8.5pt; }
+  .foot { display: flex; justify-content: space-between; font-size: 8pt; color: #6a7382; margin-top: 2.5mm; }
+  .foot b { color: #9a6d2b; }
+  .ex td { font-size: 9pt; }
+  .ex tbody tr { height: auto; }
+  ul { margin: 0; padding-left: 5mm; }
+  li { margin-bottom: 1.8mm; }
+  .box { border: 0.8pt solid #cdbfa5; border-radius: 3mm; padding: 4mm 5mm; margin-top: 6mm; }
+</style>
+</head>
+<body>
+<section class="page">
+  <div class="top">
+    <h1>Baby-logboek</h1>
+    <div class="fields"><div>Naam <span></span></div><div>Datum <span></span></div></div>
+  </div>
+  <table>
+    <colgroup><col class="c-time"><col class="c-feed"><col class="c-sleep"><col class="c-diaper"><col></colgroup>
+    <thead>
+      <tr>
+        <th>Tijd</th>
+        <th>Voeding<small>borst L / R of fles … ml</small></th>
+        <th>Slaap<small>van … tot …</small></th>
+        <th>Luier<small>plas / poep</small></th>
+        <th>Notitie<small>bijzonderheden, medicijn, huilen …</small></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+      <tr><td></td><td class="muted">L / R · fles ___ ml</td><td class="muted">___ – ___</td><td><span class="box-tick"></span><span class="box-tick"></span></td><td></td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td>Totaal</td><td>___ voedingen · ___ ml</td><td>___ uur slaap</td><td>___ / ___</td><td></td></tr>
+    </tfoot>
+  </table>
+  <div class="foot">
+    <span>Eerste vakje = plas, tweede = poep. Schrijf het meteen op: ’s nachts weet je het later echt niet meer.</span>
+    <span>Gemaakt met <b>Nuvo</b> · nuvoapp.nl</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="top">
+    <h1>Zo vul je het in</h1>
+    <div class="fields">Voorbeeld en tips</div>
+  </div>
+  <h2>Voorbeeld</h2>
+  <table class="ex">
+    <colgroup><col class="c-time"><col class="c-feed"><col class="c-sleep"><col class="c-diaper"><col></colgroup>
+    <thead><tr><th>Tijd</th><th>Voeding</th><th>Slaap</th><th>Luier</th><th>Notitie</th></tr></thead>
+    <tbody>
+      <tr><td>06:40</td><td>Borst L, daarna R</td><td></td><td>plas</td><td>Vrolijk wakker</td></tr>
+      <tr><td>08:15</td><td></td><td>08:15 – 09:50</td><td></td><td>In de wieg</td></tr>
+      <tr><td>10:00</td><td>Fles 120 ml</td><td></td><td>plas + poep</td><td></td></tr>
+      <tr><td>13:30</td><td>Borst R</td><td>13:50 – 15:10</td><td>plas</td><td>Vitamine D gegeven</td></tr>
+      <tr><td>03:10</td><td>Fles 90 ml</td><td>03:30 – 06:30</td><td>plas</td><td>Snel weer in slaap</td></tr>
+    </tbody>
+  </table>
+  <div class="box">
+    <h2>Tips</h2>
+    <ul>
+      <li>Houd pen en logboek bij de plek waar je voedt of verschoont, dan vul je het meteen in.</li>
+      <li>Schrijf bij borstvoeding op met welke kant je eindigde; dan weet je bij de volgende voeding waar je begint.</li>
+      <li>Tel aan het eind van de dag op: aantal voedingen, uren slaap en natte luiers. Na een paar dagen zie je het ritme.</li>
+      <li>Neem het mee naar het consultatiebureau: vragen als “hoe vaak drinkt ze?” en “hoeveel slaapt hij?” heb je dan zo beantwoord.</li>
+    </ul>
+  </div>
+  <div class="box">
+    <h2>Liever op je telefoon?</h2>
+    <p style="margin:0">Nuvo doet hetzelfde met één gebaar op het wiel, ook ’s nachts met één hand. Je partner kan versleuteld meekijken, en je maakt er in één tik een PDF van. Zoek “Nuvo” in de App Store.</p>
+  </div>
+  <div style="flex:1"></div>
+  <div class="foot">
+    <span>Nuvo is een logboek, geen medisch advies. Twijfel je? Neem contact op met het consultatiebureau of je huisarts.</span>
+    <span>Gemaakt met <b>Nuvo</b> · nuvoapp.nl</span>
+  </div>
+</section>
+</body>
+</html>

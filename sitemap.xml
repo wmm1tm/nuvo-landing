@@ -18,4 +18,58 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/"/>
   </url>
+  <url>
+    <loc>https://nuvoapp.nl/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/privacy/"/>
+  </url>
+  <url>
+    <loc>https://nuvoapp.nl/nl/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/privacy/"/>
+  </url>
+  <url>
+    <loc>https://nuvoapp.nl/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/privacy/"/>
+  </url>
+  <url>
+    <loc>https://nuvoapp.nl/nl/flesvoeding-berekenen/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/flesvoeding-berekenen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/formula-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/en/formula-calculator/"/>
+  </url>
+  <url>
+    <loc>https://nuvoapp.nl/en/formula-calculator/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/flesvoeding-berekenen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/formula-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/en/formula-calculator/"/>
+  </url>
+  <url>
+    <loc>https://nuvoapp.nl/nl/hoeveel-slaap-baby/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/hoeveel-slaap-baby/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/baby-sleep-by-age/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/en/baby-sleep-by-age/"/>
+  </url>
+  <url>
+    <loc>https://nuvoapp.nl/en/baby-sleep-by-age/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/hoeveel-slaap-baby/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/baby-sleep-by-age/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/en/baby-sleep-by-age/"/>
+  </url>
+  <url>
+    <loc>https://nuvoapp.nl/nl/baby-logboek/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/baby-logboek/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/baby-log/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/en/baby-log/"/>
+  </url>
+  <url>
+    <loc>https://nuvoapp.nl/en/baby-log/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/baby-logboek/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/baby-log/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/en/baby-log/"/>
+  </url>
 </urlset>

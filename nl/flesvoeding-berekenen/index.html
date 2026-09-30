@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoeveel flesvoeding heeft mijn baby nodig? Bereken het · Nuvo</title>
+<meta name="description" content="Gratis calculator: vul het gewicht van je baby en het aantal voedingen per dag in en zie hoeveel ml flesvoeding per dag en per voeding past bij de vuistregel van het Voedingscentrum.">
+<link rel="canonical" href="https://nuvoapp.nl/nl/flesvoeding-berekenen/">
+<link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/flesvoeding-berekenen/">
+<link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/formula-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/en/formula-calculator/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Nuvo">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://nuvoapp.nl/nl/flesvoeding-berekenen/">
+<meta property="og:title" content="Hoeveel flesvoeding heeft mijn baby nodig? Bereken het · Nuvo">
+<meta property="og:description" content="Gratis calculator: vul het gewicht van je baby en het aantal voedingen per dag in en zie hoeveel ml flesvoeding per dag en per voeding past bij de vuistregel van het Voedingscentrum.">
+<meta property="og:image" content="https://nuvoapp.nl/assets/og-nl.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<div class="lang-switch">
+  <a href="/nl/flesvoeding-berekenen/?lang=none" class="active" hreflang="nl">NL</a> · <a href="/en/formula-calculator/?lang=none" hreflang="en">EN</a>
+</div>
+
+<div class="wrap guide">
+
+  <a class="brand" href="/nl/">
+    <img src="/assets/icon.png" alt="">
+    <span>Nuvo</span>
+  </a>
+
+  <h1>Hoeveel flesvoeding heeft je baby nodig?</h1>
+  <p class="sub">Een veelgebruikte vuistregel is ongeveer 150 ml flesvoeding per kilo lichaamsgewicht per dag. Vul hieronder het gewicht van je baby in en hoe vaak je voedt, dan zie je wat dat per dag en per fles betekent. Er wordt niets opgeslagen of verstuurd.</p>
+  <form class="calc" onsubmit="return false">
+    <div class="calc-row">
+      <label>Gewicht van je baby (kg)<span class="calc-weight"><input type="number" inputmode="decimal" min="0" step="0.1" id="weight" value="4.5"></span></label>
+      <label>Aantal voedingen per dag<select id="feeds"><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8" selected>8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select></label>
+    </div>
+    <div class="calc-result" aria-live="polite">
+      <div><b id="r-day">–</b><span>per dag</span></div>
+      <div><b id="r-feed">–</b><span>per voeding</span></div>
+    </div>
+  </form>
+<script>
+(function () {
+  var units = false;
+  var fmt = new Intl.NumberFormat('nl-NL', { maximumFractionDigits: 0 });
+  var fmt1 = new Intl.NumberFormat('nl-NL', { maximumFractionDigits: 1 });
+  function update() {
+    var w = parseFloat(String(document.getElementById('weight').value).replace(',', '.'));
+    if (!isFinite(w) || w <= 0) w = 0;
+    var unit = document.getElementById('unit');
+    var kg = unit && unit.value === 'lb' ? w * 0.4536 : w;
+    var feeds = parseInt(document.getElementById('feeds').value, 10) || 8;
+    var day = kg * 150;
+    var feed = Math.round(day / feeds / 5) * 5;
+    var oz = function (ml) { return ' · ' + fmt1.format(ml / 29.57) + ' oz'; };
+    document.getElementById('r-day').textContent = fmt.format(day) + ' ml' + (units ? oz(day) : '');
+    document.getElementById('r-feed').textContent = fmt.format(feed) + ' ml' + (units ? oz(feed) : '');
+  }
+  document.querySelector('.calc').addEventListener('input', update);
+  document.querySelector('.calc').addEventListener('change', update);
+  update();
+})();
+</script>
+
+  <h2>Hoe rekent dit?</h2>
+  <ul><li>Per dag: gewicht in kilo × 150 ml. Een baby van 5 kilo komt zo op ongeveer 750 ml per dag.</li><li>Per voeding: de hoeveelheid per dag gedeeld door het aantal voedingen.</li></ul>
+  <p>Deze vuistregel komt van het <a href="https://www.voedingscentrum.nl/nl/zwanger-en-kind/borstvoeding-en-flesvoeding/flesvoeding-geven/hoeveel-flesvoeding-heeft-mijn-baby-nodig-.aspx" rel="noopener">Voedingscentrum</a>.</p>
+
+  <h2>Een richtlijn, geen regel</h2>
+  <p>Je baby geeft zelf aan hoeveel en hoe vaak hij of zij wil drinken. Op de ene dag is dat meer, op de andere minder, en ook per voeding verschilt het. Kijk vooral naar je baby: drinkt het goed, plast het genoeg en groeit het? Twijfel je, vraag het dan aan het consultatiebureau of je huisarts.</p>
+  <p>Eet je baby ook vaste voeding, meestal vanaf ongeveer 6 maanden, dan past deze vuistregel niet meer.</p>
+
+  <h2>Waarom bijhouden handig is</h2>
+  <p>Om 3 uur ’s nachts weet bijna niemand nog precies wanneer de laatste fles was en hoeveel erin ging. Wie het bijhoudt, ziet in één oogopslag hoeveel het vandaag was en wanneer de volgende voeding ongeveer komt.</p>
+
+  <section class="appbox">
+    <h2>Houd voedingen bij met Nuvo</h2>
+    <p>Log een fles of borstvoeding met één gebaar op het wiel, ook ’s nachts met één hand. Zie hoeveel ml het vandaag was, per voeding en per dag.</p>
+    <div class="cta-row">
+    <span class="cta soon">Binnenkort in de App Store</span>
+    <p class="cta-note">Voor iPhone. De knop verschijnt zodra de nieuwe versie live staat.</p>
+  </div>
+  </section>
+
+  <p>Zie ook: <a href="/nl/hoeveel-slaap-baby/">hoeveel slaap heeft een baby nodig?</a> en het <a href="/nl/baby-logboek/">gratis baby-logboek om te printen</a>.</p>
+  <p class="honest">Nuvo is een logboek, geen medisch advies. Twijfel je over de gezondheid van je baby? Neem contact op met het consultatiebureau of je huisarts.</p>
+
+  <footer>
+    <a href="/nl/">Naar de startpagina</a>
+    <span class="sep">·</span>
+    <a href="/nl/privacy/">Privacybeleid</a>
+    <span class="sep">·</span>
+    <a href="mailto:wmtmbu@proton.me">Contact</a>
+    <span class="sep">·</span>
+    <a href="/nl/flesvoeding-berekenen/">Bereken hoeveel flesvoeding je baby nodig heeft</a>
+    <span class="sep">·</span>
+    <a href="/nl/hoeveel-slaap-baby/">Hoeveel slaap heeft een baby nodig?</a>
+    <span class="sep">·</span>
+    <a href="/nl/baby-logboek/">Baby-logboek om te printen (PDF)</a>
+  </footer>
+
+</div>
+</body>
+</html>

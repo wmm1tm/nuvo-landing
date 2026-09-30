@@ -79,3 +79,16 @@ de nieuwe versie live staat: in `nl/index.html` en `en/index.html` de uitgecomme
 de `apple-itunes-app`-meta in de head weer aanzetten, in `og-src/template.html` de `note` terug
 naar "Probeer 7 dagen gratis · geen account nodig" / "Try 7 days free · no account needed",
 `node og-src/build.mjs`, en `nuvo-landing-upload` opnieuw vullen.
+
+## Gidsen en hulpmiddelen (NL + EN)
+
+Om beter gevonden te worden (2026-09-30): flesvoedingcalculator (`/nl/flesvoeding-berekenen/`,
+`/en/formula-calculator/`), slaap per leeftijd (`/nl/hoeveel-slaap-baby/`,
+`/en/baby-sleep-by-age/`) en een baby-logboek om te printen (`/nl/baby-logboek/`,
+`/en/baby-log/`). Teksten in `tools/guides.mjs` (regels bovenin: vuistregels met bron, geen
+medisch advies), pagina's + `sitemap.xml` via `node tools/build-guides.mjs`. De start- en
+privacypagina's blijven met de hand geschreven. PDF's uit `tools/baby-logboek.html` en
+`tools/baby-log.html` via `node tools/print.mjs` (Chrome/Edge). Staat Nuvo live? Vul
+`APP_STORE_ID` in `tools/build-guides.mjs` in en draai het opnieuw: dan krijgen de gidsen een
+App Store-knop met eigen campagnelabel (`pt=129476149&ct=<pagina>`).
+Uploaden: een schone kopie zonder `.git`, `README.md`, `tools/` en `og-src/`.

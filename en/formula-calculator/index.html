@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How much formula does my baby need? Calculator · Nuvo</title>
+<meta name="description" content="Free calculator: enter your baby's weight and number of feeds per day and see how much formula per day and per feed fits a common guideline. In ml or oz.">
+<link rel="canonical" href="https://nuvoapp.nl/en/formula-calculator/">
+<link rel="alternate" hreflang="nl" href="https://nuvoapp.nl/nl/flesvoeding-berekenen/">
+<link rel="alternate" hreflang="en" href="https://nuvoapp.nl/en/formula-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://nuvoapp.nl/en/formula-calculator/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Nuvo">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:url" content="https://nuvoapp.nl/en/formula-calculator/">
+<meta property="og:title" content="How much formula does my baby need? Calculator · Nuvo">
+<meta property="og:description" content="Free calculator: enter your baby's weight and number of feeds per day and see how much formula per day and per feed fits a common guideline. In ml or oz.">
+<meta property="og:image" content="https://nuvoapp.nl/assets/og-en.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<div class="lang-switch">
+  <a href="/nl/flesvoeding-berekenen/?lang=none" hreflang="nl">NL</a> · <a href="/en/formula-calculator/?lang=none" class="active" hreflang="en">EN</a>
+</div>
+
+<div class="wrap guide">
+
+  <a class="brand" href="/en/">
+    <img src="/assets/icon.png" alt="">
+    <span>Nuvo</span>
+  </a>
+
+  <h1>How much formula does your baby need?</h1>
+  <p class="sub">A common guideline is about 150 ml of formula per kilo of body weight per day. Enter your baby's weight and how often you feed below, and see what that means per day and per bottle. Nothing is stored or sent anywhere.</p>
+  <form class="calc" onsubmit="return false">
+    <div class="calc-row">
+      <label>Your baby's weight<span class="calc-weight"><input type="number" inputmode="decimal" min="0" step="0.1" id="weight" value="4.5"><select id="unit" aria-label="Unit"><option value="kg">kg</option><option value="lb">lb</option></select></span></label>
+      <label>Feeds per day<select id="feeds"><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8" selected>8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select></label>
+    </div>
+    <div class="calc-result" aria-live="polite">
+      <div><b id="r-day">–</b><span>per day</span></div>
+      <div><b id="r-feed">–</b><span>per feed</span></div>
+    </div>
+  </form>
+<script>
+(function () {
+  var units = true;
+  var fmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 0 });
+  var fmt1 = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 1 });
+  function update() {
+    var w = parseFloat(String(document.getElementById('weight').value).replace(',', '.'));
+    if (!isFinite(w) || w <= 0) w = 0;
+    var unit = document.getElementById('unit');
+    var kg = unit && unit.value === 'lb' ? w * 0.4536 : w;
+    var feeds = parseInt(document.getElementById('feeds').value, 10) || 8;
+    var day = kg * 150;
+    var feed = Math.round(day / feeds / 5) * 5;
+    var oz = function (ml) { return ' · ' + fmt1.format(ml / 29.57) + ' oz'; };
+    document.getElementById('r-day').textContent = fmt.format(day) + ' ml' + (units ? oz(day) : '');
+    document.getElementById('r-feed').textContent = fmt.format(feed) + ' ml' + (units ? oz(feed) : '');
+  }
+  document.querySelector('.calc').addEventListener('input', update);
+  document.querySelector('.calc').addEventListener('change', update);
+  update();
+})();
+</script>
+
+  <h2>How is this calculated?</h2>
+  <ul><li>Per day: weight in kilos × 150 ml. A baby of 5 kg (11 lb) comes to about 750 ml (25 oz) a day.</li><li>Per feed: the daily amount divided by the number of feeds.</li><li>Pounds are converted at 1 lb = 0.4536 kg, ounces at 1 fl oz = 29.57 ml.</li></ul>
+  <p>The guideline used here is the one from the Dutch <a href="https://www.voedingscentrum.nl/nl/zwanger-en-kind/borstvoeding-en-flesvoeding/flesvoeding-geven/hoeveel-flesvoeding-heeft-mijn-baby-nodig-.aspx" rel="noopener">Voedingscentrum</a> (Netherlands Nutrition Centre). Guidance in your country may use a slightly different range.</p>
+
+  <h2>A guideline, not a rule</h2>
+  <p>Your baby shows how much and how often they want to drink. Some days it is more, some days less, and it varies per feed too. Look at your baby first: are they feeding well, wetting enough diapers and growing? If in doubt, ask your health visitor, paediatrician or doctor.</p>
+  <p>Once your baby also eats solid food, usually from around 6 months, this guideline no longer applies.</p>
+
+  <h2>Why tracking helps</h2>
+  <p>At 3 a.m., hardly anyone remembers exactly when the last bottle was or how much went in. When you track it, you see at a glance how much it was today and roughly when the next feed is due.</p>
+
+  <section class="appbox">
+    <h2>Track feeds with Nuvo</h2>
+    <p>Log a bottle or breastfeed with one gesture on the wheel, even one-handed at night. See how much it was today, per feed and per day.</p>
+    <div class="cta-row">
+    <span class="cta soon">Coming soon to the App Store</span>
+    <p class="cta-note">For iPhone. The button appears as soon as the new version is live.</p>
+  </div>
+  </section>
+
+  <p>See also: <a href="/en/baby-sleep-by-age/">how much sleep does a baby need?</a> and the <a href="/en/baby-log/">free printable baby log</a>.</p>
+  <p class="honest">Nuvo is a logbook, not medical advice. Worried about your baby's health? Contact your health visitor, paediatrician or doctor.</p>
+
+  <footer>
+    <a href="/en/">Back to the home page</a>
+    <span class="sep">·</span>
+    <a href="/en/privacy/">Privacy policy</a>
+    <span class="sep">·</span>
+    <a href="mailto:wmtmbu@proton.me">Contact</a>
+    <span class="sep">·</span>
+    <a href="/en/formula-calculator/">Work out how much formula your baby needs</a>
+    <span class="sep">·</span>
+    <a href="/en/baby-sleep-by-age/">How much sleep does a baby need?</a>
+    <span class="sep">·</span>
+    <a href="/en/baby-log/">Printable baby log (PDF)</a>
+  </footer>
+
+</div>
+</body>
+</html>
