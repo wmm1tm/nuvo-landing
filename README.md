@@ -34,7 +34,7 @@ netlify.toml          — publish-map + wat lichte security-headers
   Voorbeeld bekijken: open `og-src/template.html?lang=nl` in de browser.
 - App Store-links dragen een campagne-parameter (`?ct=site-nl` / `?ct=site-en`), zichtbaar
   in App Store Connect → App Analytics → Sources. Apple telt campagnes pas mee als de
-  link ook je provider-id bevat (`&pt=<id>`); die staat er nog niet in.
+  link ook je provider-id bevat (`&pt=129476149`); alle links hebben die sinds 2026-10-05.
 
 ## Deployen op Netlify
 
@@ -71,14 +71,11 @@ netlify.toml          — publish-map + wat lichte security-headers
 - Screenshot is nu 640px breed (~330KB) — prima voor nu, kan later vervangen worden door
   een geëxporteerde videoframe of een lichtere WebP-versie.
 
-## Tijdelijk "Binnenkort in de App Store" (sinds 2026-09-25)
+## Live in de App Store (sinds 2026-10-05)
 
-De knop "Probeer 7 dagen gratis" en de Safari-appbanner staan tijdelijk uit. Terugzetten zodra
-de nieuwe versie live staat: in `nl/index.html` en `en/index.html` de uitgecommentarieerde
-`<a class="cta" …>` en `<p class="cta-note">` terugzetten (staan als commentaar in `.cta-row`),
-de `apple-itunes-app`-meta in de head weer aanzetten, in `og-src/template.html` de `note` terug
-naar "Probeer 7 dagen gratis · geen account nodig" / "Try 7 days free · no account needed",
-`node og-src/build.mjs`, en `nuvo-landing-upload` opnieuw vullen.
+Nuvo 1.1.0 staat live (App Store-ID 6813427228). De knop "Probeer 7 dagen gratis" en de
+Safari-appbanner (`apple-itunes-app`) staan weer aan; de tijdelijke "Binnenkort"-stand
+(2026-09-25 t/m 2026-10-05) is weg.
 
 ## Gidsen en hulpmiddelen (NL + EN)
 
@@ -88,7 +85,6 @@ Om beter gevonden te worden (2026-09-30): flesvoedingcalculator (`/nl/flesvoedin
 `/en/baby-log/`). Teksten in `tools/guides.mjs` (regels bovenin: vuistregels met bron, geen
 medisch advies), pagina's + `sitemap.xml` via `node tools/build-guides.mjs`. De start- en
 privacypagina's blijven met de hand geschreven. PDF's uit `tools/baby-logboek.html` en
-`tools/baby-log.html` via `node tools/print.mjs` (Chrome/Edge). Staat Nuvo live? Vul
-`APP_STORE_ID` in `tools/build-guides.mjs` in en draai het opnieuw: dan krijgen de gidsen een
+`tools/baby-log.html` via `node tools/print.mjs` (Chrome/Edge). `APP_STORE_ID` in `tools/build-guides.mjs` staat ingevuld, dus de gidsen hebben een
 App Store-knop met eigen campagnelabel (`pt=129476149&ct=<pagina>`).
 Uploaden: een schone kopie zonder `.git`, `README.md`, `tools/` en `og-src/`.

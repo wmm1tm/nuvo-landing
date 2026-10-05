@@ -15,7 +15,7 @@ const LOCALE = { nl: 'nl_NL', en: 'en_US' };
 // Staat Nuvo live? Vul hier het App Store-ID in (6813427228), dan krijgen de gidsen een App
 // Store-knop en de Safari-smartbanner. Leeg = het label "Binnenkort in de App Store", net als de
 // startpagina nu.
-const APP_STORE_ID = '';
+const APP_STORE_ID = '6813427228';
 
 const T = {
   nl: {
